@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, Variants } from 'framer-motion';
-import { perspective, slide, opacity } from '@/lib/anim';
+import { perspective, slide, opacity } from '@/lib/anim-inner';
 
 const anim = (variants: Variants) => {
   return {

@@ -2,9 +2,9 @@
 
 import { AnimatePresence } from 'framer-motion';
 import { usePathname } from 'next/navigation';
-import Inner from '@/components/Inner';
 import { PropsWithChildren, useContext, useRef } from 'react';
 import { LayoutRouterContext } from 'next/dist/shared/lib/app-router-context.shared-runtime';
+import Stairs from './Stairs';
 
 function FrozenRouter(props: PropsWithChildren) {
   const context = useContext(LayoutRouterContext);
@@ -20,9 +20,9 @@ export default function AnimationLayout({ children }: { children: React.ReactNod
 
   return (
     <AnimatePresence mode="wait">
-      <Inner key={pathname}>
+      <Stairs key={pathname}>
         <FrozenRouter>{children}</FrozenRouter>
-      </Inner>
+      </Stairs>
     </AnimatePresence>
   );
 }
